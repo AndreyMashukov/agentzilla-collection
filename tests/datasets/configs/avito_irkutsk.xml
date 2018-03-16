@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <country>Россия</country>
+    <region>Иркутская область</region>
+    <city>Иркутск</city>
+    <site>Avito</site>
+    <mainurl>https://m.avito.ru/irkutsk/&lt;Param&gt;/?s=0</mainurl>
+    <host>https://m.avito.ru</host>
+    <pattern>//a[@class='item-link']/@href</pattern>
+	<params>
+	    <param type="flat"       operation="rent">kvartiry/sdam</param>
+	    <param type="room"       operation="rent">komnaty/sdam</param>
+	    <param type="house"      operation="rent">doma_dachi_kottedzhi/sdam</param>
+	    <param type="garage"     operation="rent">garazhi_i_mashinomesta/sdam</param>
+	    <param type="commercial" operation="rent">kommercheskaya_nedvizhimost/sdam</param>
+	</params>
+    <nextbutton pageslimit="12" seenlimit="25">//li[@class='page page-next']/a/@href</nextbutton>
+    <headers>
+	<header name="Host">m.avito.ru</header>
+	<header name="Accept">text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</header>
+	<header name="Accept-Language">ru,en-US;q=0.7,en;q=0.3</header>
+	<header name="Accept-Encoding">gzip, deflate, br</header>
+	<header name="Connection">keep-alive</header>
+	<header name="Upgrade-Insecure-Request">1</header>
+	<header name="Cache-Control">max-age=0</header>
+    </headers>
+    <gzdecode>Y</gzdecode>
+    <proxy>Y</proxy>
+</config>
